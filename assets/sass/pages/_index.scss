@@ -1,0 +1,545 @@
+// Hero Slider
+.hero {
+    margin: 25px 0;
+    @include lg-devices {
+        margin: 40px 0;
+
+    }
+    .hero-slider {
+        padding-bottom: 40px;
+        overflow: hidden;
+        position: relative;
+        @include xsm-devices {
+            padding-bottom: 50px;
+        }
+        @include lg-devices {
+            padding-bottom: 60px;
+        }
+    }
+    .item {
+        padding: 30px 15px;
+        background-size: cover;
+        background-position: center right;
+        position: relative;
+        z-index: 1;
+        
+        @media (min-width: 425px) {
+            padding: 40px 20px;
+        }
+        @include xsm-devices {
+            padding: 50px 30px;
+        }
+        @include md-devices {
+            padding: 60px 40px;
+        }
+        @include lg-devices {
+            padding: 90px 75px;
+
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background: linear-gradient(90deg, #FFC329 65%, rgba(255, 224, 40, 0) 108%);
+            z-index: -1;
+            @include lg-devices {
+                background: linear-gradient(90deg, #FFC329 52.5%, rgba(255, 224, 41, 0) 87%);
+            }
+        }
+        .slider-content {
+            max-width: 480px;
+        }
+        h1 {
+            font-weight: 700;
+            margin-bottom: 20px;
+            line-height: 1.3;
+            font-size: 18px;
+            @media (min-width: 425px) {
+                font-size: 20px;
+            }
+            @include xsm-devices {
+                font-weight: 800;
+            }
+            @include sm-devices {
+                font-size: 22px;
+                margin-bottom: 25px;
+            }
+            @include lg-devices {
+                font-size: 28px;
+                margin-bottom: 20px;
+            }
+            @include xl-devices {
+                font-size: 32px;
+            }
+            @include xxl-devices {
+                font-size: 36px;
+            }
+        }
+        h5 {
+            margin-bottom: 15px;
+            font-weight: 700;
+            font-size: 14px;
+            @media (min-width: 425px) {
+                font-size: 15px;
+            }
+            @include sm-devices {
+                font-size: 16px;
+                margin-bottom: 30px;
+            }
+            @include lg-devices {
+                font-size: 18px;
+                margin-bottom: 40px;
+            }
+            @include xl-devices {
+                margin-bottom: 50px;
+            }
+        }
+
+        .offer-text {
+            font-weight: 600;
+            font-size: 15px;
+            margin-bottom: 20px;
+            @include sm-devices {
+                font-size: 16px;
+                margin-bottom: 40px;
+            }
+            @include lg-devices {
+                font-size: 18px;
+                margin-bottom: 50px;
+                font-weight: 700;
+            }
+            @include xl-devices {
+                font-size: 20px;
+                margin-bottom: 60px;
+            }
+            strong {
+                font-size: 18px;
+                font-weight: 800;
+                @include lg-devices {
+                    font-size: 24px;
+                }
+                @include xl-devices {
+                    font-size: 30px;
+                }
+            }
+            del {
+                color:#5F5F5F;
+                font-size: 15px;
+                font-weight: normal;
+                @include lg-devices {
+                    font-size: 18px;
+                }
+                @include xl-devices {
+                    font-size: 26px;
+                }
+            }
+        }
+    }
+
+    .swiper-pagination-bullet {
+        @include width-height(10px, 10px);
+        background-color: #c4c4c4;
+        transform: scale(1);
+        opacity: 1;
+        transition: all 0.3s ease;
+        @include lg-devices {
+            @include width-height(14px, 14px);
+        }
+        @include xxl-devices {
+            @include width-height(16px, 16px);
+        }
+
+        &-active {
+            background-color: $color__red;
+            width: 22px;
+            border-radius: 10px;
+            @include lg-devices {
+                width: 30px;
+            }
+            @include xxl-devices {
+                width: 36px;
+            }
+        }
+    }
+}
+
+// Food Category Slider
+.food-category {
+
+    .section-title {
+        display: flex;
+        justify-content: space-between;
+
+        .category-slider-navigation {
+           position: relative;
+           display: flex;
+           flex-direction: row-reverse;
+            width: 60px;
+            justify-content: space-between;
+           .swiper-button-next, .swiper-button-prev {
+                position: relative;
+                left: 0;
+                right: 0;
+
+                &::after {
+                    font-size: 14px;
+                    color: $color__black;
+                    font-weight: 600;
+                    @include xl-devices {
+                        font-size: 20px;
+                    }
+                    @include xxl-devices {
+                        font-size: 22px;
+                    }
+                }
+                &:hover {
+                    &::after {
+                        color: $color__red;
+                    }
+                }
+           }
+        }
+    }
+    .food-category-slider {
+        overflow: hidden;
+        .swiper-slide {
+            border-radius: 10px;
+            padding: 15px 10px;
+            
+            @include xl-devices {
+                border-radius: 16px;
+            }
+
+            img {
+                height: 60px;
+                margin-bottom: 10px;
+                @include xsm-devices {
+                    height: 80px;
+                }
+                @include xl-devices {
+                    height: 100px;
+                }
+            }
+            h5 {
+                font-weight: 700;
+                font-size: 16px;
+
+                @include xxl-devices {
+                    font-size: 18px;
+                }
+            }
+            p {
+                font-weight: 400;
+            }
+        }
+    }
+}
+
+// Product Branding
+.product-branding {
+    margin: 40px 0;
+    @include sm-devices {
+        margin: 60px 0;
+    }
+    @include lg-devices {
+        margin: 90px 0;
+    }
+    @include xl-devices {
+        margin: 110px 0;
+    }
+    @include xxl-devices {
+        margin: 130px 0;
+    }
+
+    .info {
+        @include md-devices {
+            max-width: 500px;
+        }
+        h2 {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            line-height: 1.5;
+
+            @media (min-width: 425px) {
+                font-size: 18px;
+            }
+            @include xsm-devices {
+                font-size: 20px;
+            }
+            @include sm-devices {
+                font-size: 24px;
+                margin-bottom: 20px;
+            }
+            @include lg-devices {
+                font-size: 26px;
+            }
+            @include xl-devices {
+                font-size: 30px;
+            }
+            @include xxl-devices {
+                margin-bottom: 25px;
+                font-size: 36px;
+            }
+
+        }
+        p {
+            margin-bottom: 20px;
+            font-weight: normal;
+            @include sm-devices {
+                margin-bottom: 30px;
+                line-height: 1.875;
+            }
+            @include lg-devices {
+                font-size: 15px;
+            }
+            @include xl-devices {
+                margin-bottom: 40px;
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+.pick-foods {
+    .nav-tabs {
+        border: 0;
+        margin-bottom: 15px;
+        .nav-link {
+            border: 0;
+            background-color: transparent;
+            padding: 0 7px;
+            font-size: 14px;
+            color: $color__black;
+            font-weight: 500;
+
+            @include sm-devices {
+                padding: 2px 5px;
+                line-height: normal;
+            }
+            @include md-devices {
+                font-size: 16px;
+                padding: 0 15px;
+            }
+            @include lg-devices {
+                padding: 4px 18px;
+            }
+            @include xxl-devices {
+                font-size: 18px;
+            }
+            &.active {
+                font-weight: 700;
+            }
+        }
+    }
+    .view-all {
+        margin: 20px 0 0;
+        
+        @include xxl-devices {
+            margin: 60px 0;
+
+        }
+
+        a {
+            font-size: 14px;
+            color: $color__red;
+            @include xxl-devices {
+                font-size: 20px;
+            }
+        }
+    }    
+}
+
+.food-item {
+    background-color: $color__white;
+    border-radius: 14px;
+    .food-thumbnail {
+        border-radius: 10px;
+        overflow: hidden;
+        position: relative;
+        
+        @include xxl-devices {
+            border-radius: 16px;
+        }
+        img {
+           transition: all 0.3s linear;
+        }
+        .overlay {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+
+            .promotion, .rating {
+                font-size: 12px;
+                color: $color__dark__yellow;
+                border-radius: 2px;
+                padding: 4px 8px;
+                text-align: center;
+                line-height: normal;
+
+                @include xxl-devices {
+                    font-size: 14px;
+                    border-radius: 5px;
+                    padding: 6px 8px;
+                }
+            }
+            .promotion {
+                background-color: #0E6987;
+                margin-bottom: 3px; 
+                @include xl-devices {
+                    margin-bottom: 5px;
+                }                   
+            }
+            .rating {
+                background-color: #064462;
+                display: inline-block;
+            }
+        }
+    }
+    .food-description {
+        padding: 10px 10px;
+        @include sm-devices {
+            padding: 15px 10px;
+        }
+        @include xl-devices {
+            padding: 16px;
+        }
+
+        .food-title {
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 1.5;
+
+            @media (min-width: 425px) {
+                font-size: 15px;
+            }
+            @include lg-devices {
+                font-size: 16px;
+            }
+            @include xl-devices {
+                font-size: 18px;
+            }
+            @include xxl-devices {
+                font-size: 19px;
+            }
+
+            a {
+                color: $color__black;
+                transition: all 0.3s;
+            }
+        }
+        p {
+            font-size: 12px;
+            font-weight: normal;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+            @include sm-devices {
+                margin: 4px 0;
+            }
+            @include lg-devices {
+                font-size: 13px;
+            }
+            @include xl-devices {
+                font-size: 14px;
+                margin: 8px 0;
+                font-weight: normal;
+            }
+        }
+        ul {
+            .price {
+                color: $color__red;
+                font-weight: 700;
+                font-size: 12px;
+                @include lg-devices {
+                    font-size: 13px;
+                }
+                @include xl-devices {
+                    font-size: 15px;
+                }
+                del {
+                    color: #ABB2B1;
+                    font-style: italic;
+                    font-weight: normal;
+                }
+            }
+            .loved {
+                color: #ABB2B1;
+                font-size: 12px;
+                @include lg-devices {
+                    font-size: 13px;
+                }
+                @include xl-devices {
+                    font-size: 16px;
+                }
+                @include xxl-devices {
+                    font-size: 17px;
+                }
+                span {
+                    color: $color__dark__yellow;
+                }
+            }
+        }
+        .buttons {
+            margin-top: 8px;
+            @include lg-devices {
+                margin-top: 15px;
+            }
+            @include xl-devices {
+                margin-top: 30px;
+            }
+
+            .btn-style1 {
+                font-size: 12px;
+                padding: 2px 12px;
+                border-radius: 4px;
+                box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.4);
+
+                @include lg-devices {
+                    padding: 6px 16px;
+                    font-size: 13px;
+                }
+                @include xl-devices {
+                    padding: 10px 24px;
+                    font-size: 15px;
+                }
+
+                svg {
+                    @include lg-devices {
+                        height: 13px;
+                        margin-left: 10px;
+                    }
+                }
+            }
+        }
+    }
+    &:hover {
+        .food-thumbnail {
+            img {
+                transform: scale(1.05);
+            }
+        }
+        .food-description {
+            .food-title {
+                a {
+                    color: $color__red;
+                }
+            } 
+            .buttons {
+                a {
+                    background-color: $color__red;
+                    color: $color__white;
+                    svg path {
+                        stroke: $color__white;
+                    }
+                }
+            }
+        }
+    }
+}

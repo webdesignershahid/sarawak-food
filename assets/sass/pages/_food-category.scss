@@ -1,0 +1,266 @@
+.food-deal-wrap {
+    .sidebar {
+        position: sticky;
+        top: 40px;
+        max-width: 360px;
+        margin: 0 auto 30px;
+
+        @include sm-devices {
+            margin: 0 auto 40px;
+        }
+        .sidebar-title {
+            font-weight: 700;
+            font-size: 18px;
+            margin-bottom: 20px;
+
+            @include lg-devices {
+                font-size: 20px;
+            }
+            @include xxl-devices {
+                font-size: 24px;
+                margin-bottom: 30px;
+            }
+
+            a {
+                color: $color__red;
+            }
+        }
+        .widget {
+            .widget-title {
+                font-size: 16px;
+                font-weight: 600;
+                margin-bottom: 20px;
+            }
+            &.product-filtering {
+                .select2-selection--single {
+                    height: inherit;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    .select2-selection__rendered {
+                        padding: 6px 10px;
+                        font-size: 14px;
+                        
+                        @include xxl-devices {
+                            padding: 10px 10px;
+                            font-size: 16px;
+                        }
+                    }
+                    .select2-selection__arrow {
+                        position: relative;
+                    }
+                }
+            }
+            &.price-range {
+                .price_slider {
+                    height: 6px;
+                    background-color: #C4C4C4;
+                    position: relative;
+                    margin: 0 0 15px;
+                    .ui-slider-range {
+                        height: 6px;
+                        background-color: $color__red;
+                        position: absolute;
+                    }
+                    .ui-slider-handle {
+                        height: 18px;   
+                        width: 18px;   
+                        background-color: $color__red;
+                        border-radius: 50%;
+                        display: block;
+                        position: absolute;
+                        top: -6px;                       
+
+                        & + .ui-slider-handle {
+                            margin-left: -1px;
+                        }
+                        &:focus {
+                            outline: 0;
+                        }
+                    }
+                }
+                .filter-meta {
+                    label {
+                        font-size: 14px;
+                    }
+                    input {
+                        border: 0;
+                        height: inherit;
+                        padding: 0;
+                        color: $color__black;
+                        margin-left: 10px;
+                        font-size: 14px;
+
+                        &:focus {
+                            border: 0;
+                            outline: 0;
+                            user-select: none;                            
+                        }
+                        &::placeholder {
+                            color: $color__black;
+                        }
+                    }
+                }
+            }
+            &.product-rating {
+                li {
+                    & + li {
+                        margin-left: 10px;
+                    }
+                    a {
+                        background-color: #F5FCFF;
+                        padding: 8px 14px;
+                        color: #575757;
+                        font-weight: 500;
+                        font-size: 14px;
+
+                        @include sm-devices {
+                            font-size: 16px;
+                        }
+                        @include lg-devices {
+                            font-size: 14px;
+                        }
+                        @include xl-devices {
+                            font-size: 18px;
+                        }
+
+                        span {
+                            color: $color__red;
+                        }
+                    }
+                    &.active {
+                        a {
+                            background-color: $color__red;
+                            color: $color__white;
+                            span {
+                                color: $color__yellow;
+                            }
+                        }
+                    }
+                }
+            }
+            &.area-location {
+                form {
+                    input[type=search] {
+                        box-shadow: none;
+                        &:focus {
+                            outline: 0;
+                            border-color: #C4C4C4;
+                        }
+                    }
+                    ul {
+                        max-height: 300px;
+                        li {
+                            margin-bottom: 10px;
+                            input {
+                                margin-top: 6.5px;
+                                &:focus {
+                                    box-shadow: none;
+                                }
+                                &:checked {
+                                    background-color: $color__red;
+                                    box-shadow: none;
+                                }
+                            }
+                            label {
+                                user-select: none;
+                                cursor: pointer;
+
+                                span {
+                                    font-size: 14px;
+
+                                    @include sm-devices {
+                                        font-size: 15px;
+                                    }
+                                    @include lg-devices {
+                                        font-size: 16px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .simplebar-track.simplebar-vertical {
+                        width: 6px;
+                        border-radius: 5px;
+                        background-color: #E8E8E8;
+
+                        .simplebar-scrollbar {
+                            background-color: $color__red;
+                            border-radius: 5px;
+
+                            &::before {
+                                opacity: 0;
+                            }
+                        }
+                    }
+
+                }
+            }
+            & + .widget {
+                margin-top: 30px;
+                
+                @include xl-devices {
+                    margin-top: 60px;
+                }
+            }
+        }
+    }
+
+    .product-wrapper {
+        .top-filter-bar {
+            margin-bottom: 15px;
+            
+            @include xxl-devices {
+                margin-bottom: 30px;                
+            }
+
+            .title {
+                font-weight: 700;
+                font-size: 18px;
+                margin-bottom: 15px;
+                @include sm-devices {
+                    margin-bottom: 0;
+                }
+                @include lg-devices {
+                    font-size: 20px;
+                }
+                @include xxl-devices {
+                    font-size: 24px;
+                }
+            }
+            .right-icons-area {
+                ul {
+                    gap: 0 15px;
+
+                    li.active {
+                        a span {
+                            color: #F79210;
+                        }
+                    }
+                }
+                span {
+                    color: #D2D2D2;
+                    font-size: 30px;
+                }
+
+                select {
+                    border: 0;
+                    padding: 0;
+                    font-weight: 600;
+                }
+            }
+        }
+
+        .product-wrapper-footer {
+            margin-top: 20px;
+            text-align: center;
+            @include md-devices {
+                text-align: left;
+                margin-top: 30px;
+            }
+            @include lg-devices {
+                margin-top: 40px;
+            }
+        }
+    }
+}

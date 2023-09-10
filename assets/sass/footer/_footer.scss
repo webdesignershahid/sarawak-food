@@ -1,0 +1,293 @@
+footer {
+    margin: 40px 0 0;
+
+    @include lg-devices {
+        margin: 75px 0 0;
+    }
+    @include xl-devices {
+        margin: 100px 0 0;
+    }
+
+    .newsletter {
+        padding: 35px 0;
+        @include lg-devices {
+            padding: 50px 0;
+        }
+        @include xl-devices {
+            padding: 95px 0;
+        }
+        .img {
+            text-align: center;
+            display: none;
+            @include md-devices {
+                display: block;
+            }
+            img {
+                width: 250px;
+                @include md-devices {
+                    width: auto;
+                }
+            }
+        }
+        .newsletter-content {
+            max-width: 500px;
+            text-align: center;
+            @media (min-width: 425px) {
+                padding: 0 20px;
+            }
+            @include md-devices {
+                text-align: left;
+                padding: 0;
+            }
+            h1 {
+                font-weight: 600;
+                font-size: 30px;
+                color: $color__white;
+                margin-bottom: 15px;
+                @include lg-devices {
+                    font-size: 40px;
+                    font-weight: 700;
+                    margin-bottom: 20px;
+                }
+                @include xl-devices {
+                    font-size: 56px;
+                    font-weight: 800;
+                    margin-bottom: 24px;
+                }
+            }   
+            p {
+                color: $color__white;
+                font-weight: normal;
+                font-size: 15px;
+
+                @include lg-devices {
+                    font-size: 16px;
+                }
+                @include xl-devices {
+                    font-size: 18px;
+                }
+            }
+            form {
+                margin-top: 30px;
+                @include lg-devices {
+                    margin-top: 40px;
+                }
+                @include xl-devices {
+                    margin-top: 50px;
+                }
+                @include xxl-devices {
+                    margin-top: 60px;
+                }
+                .input-group {
+                    background-color: $color__white;
+                    padding: 5px;
+                    border-radius: 6px;
+                    
+                    @include lg-devices {
+                        border-radius: 10px;
+                        padding: 10px;
+                    }
+                    input {
+                        height: 40px;
+                        border: 0;
+                        background-color: transparent;
+                        @include lg-devices {
+                            height: 45px;
+                        }
+                        @include xl-devices {
+                            height: 50px;
+                        }
+                    }
+                    button {
+                        background-color: $color__black;
+                        border: 0;
+                        color: $color__white;
+                        border-radius: 8px !important;
+                        padding: 5px 10px;
+                        display: flex;
+                        align-items: center;
+                        font-size: 14px;
+                        
+                        @include lg-devices {
+                            padding: 10px 22px;
+                            font-size: 16px;
+                        }
+
+                        span {
+                            margin-left: 10px;
+                            font-size: 16px;
+                            @include lg-devices {
+                                font-size: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .footer-top {
+        padding: 30px 0;
+
+        @include sm-devices {
+            padding: 50px 0;
+        }
+        @include lg-devices {
+            padding: 70px 0;
+        }
+        @include xl-devices {
+            padding: 90px 0;
+        }
+
+        .footer-widget {
+            @include xsm-devices {
+                max-width: 400px;
+                margin: 0 auto;
+            }
+            @include lg-devices {
+                margin: 0;
+                max-width: 330px;
+            }
+            .brand-logo {
+                margin-bottom: 20px;
+                display: block;
+            }
+            p {
+                color: #E6E6E6;
+                font-size: 15px;
+                font-weight: 400;
+                line-height: 1.875;
+            }
+            .widget-title {
+                color: #F79210;
+                font-size: 15px;
+                padding: 40px 0 10px;
+                margin-bottom: 18px;
+                @include lg-devices {
+                    padding: 20px 0 10px;
+                }
+                @include xl-devices {
+                    font-size: 18px;
+                }
+            }
+
+            ul {
+                li {
+                    & + li {
+                        margin-top: 3px;
+                        @include lg-devices {
+                            margin-top: 6px;
+                        }
+                        @include xl-devices {
+                            margin-top: 10px;
+                        }
+                    }
+                    a {
+                        color: #E6E6E6;
+                        font-size: 15px;
+                        font-weight: 300;
+                        transition: all 0.3s;
+                        @include xl-devices {
+                            font-size: 16px;
+                        }
+
+                        &:hover {
+                            color: $color__white;
+                            padding-left: 5px;
+                        }
+                    }
+                }
+            }
+            .social-media {
+                margin-top: 25px;
+                a {
+                    display: inline-block;
+                    width: 28px;
+                    height: 28px;
+                    border-radius: 4px;
+                    background-color: #E6E6E6;
+                    text-align: center;
+                    font-size: 14px;
+                    color: #6b7280;
+                    transition: all 0.3s;
+
+                    &:hover {
+                        background-color: #F79210;
+                        color: $color__black;
+                    }
+
+                    & + a {
+                        margin-left: 10px;
+                    }
+                }
+            }
+
+            .contact-cta {
+                margin-top: 15px;
+                @include md-devices {
+                    margin-top: 30px;
+                }
+                @include lg-devices {
+                    flex-direction: column;
+                    align-items: flex-start !important;
+                    margin-top: 40px;
+                }
+                @include xl-devices {
+                    flex-direction: row;
+                    align-items: center !important;
+                }
+
+                .icon {
+                    color: #F79210;
+                    font-size: 44px;
+                    @include md-devices {
+                        display: none;
+                    }
+                    @include xxl-devices {
+                        display: block;
+                    }
+                }
+                h5 {
+                    color: #F79210;
+                }
+                .button {
+                    @include lg-devices {
+                        margin-top: 15px;
+                    }
+                    @include xl-devices {
+                        margin-top: 0;
+                    }
+                }
+                .btn {
+                    background-color: $color__black;
+                    border: 1px solid #F79210;
+                    color: #E6E6E6;
+                    padding: 12px 18px;
+                    font-size: 13px;
+                    border-radius: 10px;
+                    font-weight: 600;
+                    transition: all 0.3s;
+
+                    &:hover {
+                        background-color: #F79210;
+                        color: $color__white;
+                    }
+                }
+            }
+        }
+    }
+    .footer-bottom {
+        border-top: 1px solid #c4c4c4;
+        p {
+            font-size: 12px;
+            font-weight: 300;
+            color: #d1d5db;
+
+            @include lg-devices {
+                font-size: 14px;
+            }
+            @include xl-devices {
+                font-size: 15px;
+            }
+        }
+    }
+}

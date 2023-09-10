@@ -1,0 +1,40 @@
+.pagination {
+    justify-content: center;
+    margin-top: 20px;
+
+    @include md-devices {
+        justify-content: end;
+        margin-top: 0;
+    }
+    .page-item {
+        & + .page-item {
+            margin-left: 10px;
+        }
+        .page-link {
+            background-color: #FFEFE7;
+            color: $color__red;
+            font-size: 14px;
+            font-weight: 600;
+            padding: 4px 14px;
+            border: 0;
+            border-radius: 5px;
+            
+            @include xl-devices {
+                font-size: 16px;
+                padding: 8px 16px;
+            }
+            @include xxl-devices {
+                font-size: 18px;
+                font-weight: 700;
+                padding: 12px 20px;
+                border-radius: 10px;
+            }
+        }
+        &.active {
+            .page-link {
+                background-color: $color__red;
+                color: $color__white;
+            }
+        }
+    }
+}
